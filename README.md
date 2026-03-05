@@ -16,3 +16,6 @@ Meanwhile, the compiled output files will be generated in the `bin` folder by de
 ## Dependency Management
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+
+Create PR : gh pr create --base main --head problem-solving --title "New Code" --body "Added"
+Merge : gh pr merge problem-solving --merge

@@ -4,7 +4,7 @@ import java.util.Scanner;
 // Interface
 interface RegistrationValidator {
     void validate(String name, int studentId, String courseCode)
-            throws StudentNameException, StudentIdException;
+        throws StudentNameException, StudentIdException;
 }
 
 // Custom exception 1
@@ -38,7 +38,7 @@ class ExamRegistrationService implements RegistrationValidator {
 
     @Override
     public void validate(String name, int studentId, String courseCode)
-            throws StudentNameException, StudentIdException {
+        throws StudentNameException, StudentIdException {
 
         // Name validation
         if (name == null || name.length() < 3 || !name.matches("[a-zA-Z ]+")) {
@@ -48,11 +48,6 @@ class ExamRegistrationService implements RegistrationValidator {
         // Student ID validation
         if (studentId < 100 || studentId > 200) {
             throw new StudentIdException("Student ID must be between 100 and 200.");
-        }
-
-        // Course validation (extra improvement)
-        if (courseCode == null || courseCode.isEmpty()) {
-            throw new StudentIdException("Course code cannot be empty.");
         }
     }
 

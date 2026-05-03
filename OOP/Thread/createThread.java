@@ -1,6 +1,5 @@
 class createThread extends Thread {
-     public void run()
-        {
+     public void run(){
             System.out.println("Fahmida Mazumder Nupur.");
         }
         public static void main(String[] args) {

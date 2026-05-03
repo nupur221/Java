@@ -19,13 +19,14 @@ public class throwKeyword {
     }
     public static void main(String[] args) {
         throwKeyword obj = new throwKeyword();
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
-        try {
-            obj.eligibleForVote(age);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Caught an exception: " + e.getMessage());
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.print("Enter your age: ");
+            int age = sc.nextInt();
+            try {
+                obj.eligibleForVote(age);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Caught an exception: " + e.getMessage());
+            }
         }
     }
 }
